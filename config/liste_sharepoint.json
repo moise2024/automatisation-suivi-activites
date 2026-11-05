@@ -1,0 +1,17 @@
+{
+  "list_name": "Suivi des activités",
+  "description": "Centralisation des rapports d’activité soumis par les contributeurs.",
+  "columns": [
+    {"name":"Title","label":"Titre du rapport","type":"Text","required":true,"max_length":120},
+    {"name":"PeriodeDebut","label":"Début de période","type":"DateOnly","required":true},
+    {"name":"PeriodeFin","label":"Fin de période","type":"DateOnly","required":true,"validation":"PeriodeFin >= PeriodeDebut"},
+    {"name":"Activite","label":"Activité réalisée","type":"MultipleLinesOfText","required":true},
+    {"name":"Indicateur","label":"Indicateur suivi","type":"Text","required":false},
+    {"name":"Cible","label":"Cible prévue","type":"Number","required":false,"min":0},
+    {"name":"Resultat","label":"Résultat obtenu","type":"Number","required":false,"min":0},
+    {"name":"Difficultes","label":"Difficultés rencontrées","type":"MultipleLinesOfText","required":false},
+    {"name":"ProchainesEtapes","label":"Prochaines étapes","type":"MultipleLinesOfText","required":false},
+    {"name":"CourrielSoumetteur","label":"Courriel du soumetteur","type":"Text","required":true,"format":"email"}
+  ],
+  "system_fields": ["Created", "Created By", "Modified", "Modified By"]
+}
